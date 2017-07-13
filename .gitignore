@@ -1,4 +1,5 @@
 # ignore todos os arquivos no diretório upload/
+.settings
 src/main/resources/public/node_modules
 
 #src/main/resources/application.properties
