@@ -1,0 +1,7 @@
+# ignore todos os arquivos no diretório upload/
+src/main/resources/public/node_modules
+
+#src/main/resources/application.properties
+src/main/resources/google.properties
+
+src/main/resources/public/app/js

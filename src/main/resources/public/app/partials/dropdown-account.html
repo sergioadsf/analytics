@@ -1,0 +1,18 @@
+<select class="form-control" ng-model="accountSelected" ng-options="accounts.name for accounts in accounts" 
+	ng-change="listarWebProperties()">
+	<option value="">-- Choose an Account --</option>
+</select>
+
+<div ng-show="params.idAccount" style="margin-top: 15px">
+	<select class="form-control" ng-model="webpropertySelected" 
+	ng-options="webproperties.name for webproperties in webproperties" ng-change="listarProfiles()">
+		<option value="">-- Choose a Web Properties --</option>
+	</select>
+</div>
+
+<div ng-show="params.idWebProperty" style="margin-top: 15px">
+	<select class="form-control" ng-model="profileSelected" ng-change="selecionarProfile()"
+	ng-options="profiles.name for profiles in profiles" >
+		<option value="">-- Choose a Profile --</option>
+	</select>
+</div>
