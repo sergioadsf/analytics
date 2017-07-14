@@ -1,29 +1,28 @@
-angular.module('analytics')
-.controller('CityController', CityController);
+angular.module('analytics').controller('CityController', CityController);
 
-function CityController(CityFactory, $scope, $rootScope, $localStorage, $location){
+function CityController(CityFactory, $scope, $rootScope, $localStorage,
+		$location) {
 	let vm = this;
 
-	$rootScope.$on('select_date', function(event){
+	$rootScope.$on('select_date', function(event) {
 		let path = $location.path();
-		if(path.includes('city')){
+		if (path.includes('city')) {
 			vm.listCity();
 		}
 	});
 
 	vm.listCityModel = {
-		list1: {},
-		list2: {},
+		list1 : {},
+		list2 : {},
 	};
 
-	vm.listCity = function(){
-		CityFactory.listCity($rootScope.params)
-		.then(function(data){
+	vm.listCity = function() {
+		CityFactory.listCity($rootScope.params).then(function(data) {
 			vm.listCityModel = data.data.objetoRetorno;
 		})
 	}
 
-	vm.init = function(){
+	vm.init = function() {
 		vm.listCity();
 	}
 

@@ -31,6 +31,8 @@ public class GA extends GAParams {
 
 	protected String sort;
 
+	protected String filter;
+
 	protected Integer maxResults;
 
 	GA(Ga ga, String token, String idTable, String dateInit1, String dateEnd1) {
@@ -77,6 +79,10 @@ public class GA extends GAParams {
 
 	public void setMaxResults(Integer maxResults) {
 		this.maxResults = maxResults;
+	}
+
+	public void setFilter(String filter) {
+		this.filter = filter;
 	}
 
 	public GA setDimension(String dimensions) {

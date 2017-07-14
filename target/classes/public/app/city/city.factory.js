@@ -1,15 +1,14 @@
-angular.module('analytics')
-.factory('CityFactory', CityFactory);
+angular.module('analytics').factory('CityFactory', CityFactory);
 
-function CityFactory($httpService){
+function CityFactory($httpService) {
 
-	let _listCity = function(params){
+	let _listCity = function(params) {
 
 		return $httpService.post(`city/listCity`, params);
 	}
 
 	let service = {
-		listCity: _listCity,
+		listCity : _listCity,
 	}
 
 	return service;

@@ -17,25 +17,25 @@
                       </tr>
                   </thead>    
 
-                  <tbody ng-repeat="city1 in vm.listCityModel.list1" >                        
+                  <tbody ng-repeat="referTraffic1 in vm.listReferTrafficModel.list1" >                        
                       <tr>
                           <td class="center info">      
-                               {{city1.name}}
+                               {{referTraffic1.name}}
                           </td>
                           <td class="center info" ng-show="dataModel.compare">                                       
-                                <span ng-show="{{city1.quantityAccess > vm.listCityModel.list2[$index].quantityAccess}}" class="glyphicon glyphicon-arrow-up green" > </span>
+                                <span ng-show="{{referTraffic1.quantityAccess > vm.listReferTrafficModel.list2[$index].quantityAccess}}" class="glyphicon glyphicon-arrow-up green" > </span>
                                 
-                                <span ng-show="{{city1.quantityAccess < vm.listCityModel.list2[$index].quantityAccess}}" class="glyphicon glyphicon-arrow-down red"> </span>
+                                <span ng-show="{{referTraffic1.quantityAccess < vm.listReferTrafficModel.list2[$index].quantityAccess}}" class="glyphicon glyphicon-arrow-down red"> </span>
                           </td>
                           <td class="center info" ng-show="dataModel.compare">                                        
-                                <span ng-show="{{city1.averageTime > vm.listCityModel.list2[$index].averageTime}}" class="glyphicon glyphicon-arrow-up green" > </span>
+                                <span ng-show="{{referTraffic1.averageTime > vm.listReferTrafficModel.list2[$index].averageTime}}" class="glyphicon glyphicon-arrow-up green" > </span>
                                 
-                                <span ng-show="{{city1.averageTime < vm.listCityModel.list2[$index].averageTime}}" class="glyphicon glyphicon-arrow-down red"> </span>
+                                <span ng-show="{{referTraffic1.averageTime < vm.listReferTrafficModel.list2[$index].averageTime}}" class="glyphicon glyphicon-arrow-down red"> </span>
                           </td>                            
                           <td class="center info" ng-show="dataModel.compare">      
-                                <span ng-show="{{city1.txRejection > vm.listCityModel.list2[$index].txRejection}}" class="glyphicon glyphicon-arrow-up green" > </span>
+                                <span ng-show="{{referTraffic1.txRejection > vm.listReferTrafficModel.list2[$index].txRejection}}" class="glyphicon glyphicon-arrow-up green" > </span>
                                 
-                                <span ng-show="{{city1.txRejection < vm.listCityModel.list2[$index].txRejection}}" class="glyphicon glyphicon-arrow-down red"> </span>
+                                <span ng-show="{{referTraffic1.txRejection < vm.listReferTrafficModel.list2[$index].txRejection}}" class="glyphicon glyphicon-arrow-down red"> </span>
                           </td>
                       </tr>
                       <tr>
@@ -43,13 +43,13 @@
                                {{params.dateInit1 | date: 'dd/MM/yyyy'}} - {{params.dateEnd1 | date: 'dd/MM/yyyy'}}
                           </td>
                            <td class="center info" class="info">      
-                               {{city1.quantityAccess}}
+                               {{referTraffic1.quantityAccess}}
                           </td>
                           <td class="center info" class="info">      
-                               {{city1.averageTime}}
+                               {{referTraffic1.averageTime}}
                           </td>                           
                           <td class="center info" class="info">      
-                               {{city1.txRejection}}%
+                               {{referTraffic1.txRejection}}%
                           </td>
                       </tr>
                      <tr ng-show="dataModel.compare">
@@ -57,13 +57,13 @@
                                {{params.dateInit2 | date: 'dd/MM/yyyy'}} - {{params.dateInit2 | date: 'dd/MM/yyyy'}}
                           </td>
                            <td class="center warning" >
-                              {{vm.listCityModel.list2[$index].quantityAccess}} -- index - {{$index}}
+                              {{vm.listReferTrafficModel.list2[$index].quantityAccess}} -- index - {{$index}}
                           </td>
                           <td class="center warning" >
-                              {{vm.listCityModel.list2[$index].averageTime}}
+                              {{vm.listReferTrafficModel.list2[$index].averageTime}}
                           </td>                           
                           <td class="center warning" >
-                              {{vm.listCityModel.list2[$index].txRejection}}%
+                              {{vm.listReferTrafficModel.list2[$index].txRejection}}%
                           </td>
                       </tr>                                             
                   </tbody>                   

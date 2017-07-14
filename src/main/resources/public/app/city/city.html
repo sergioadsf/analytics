@@ -23,19 +23,19 @@
                                {{city1.name}}
                           </td>
                           <td class="center info" ng-show="dataModel.compare">                                       
-                                <span ng-show="{{city1.quantityAccess > listCityModel.list2[$index].quantityAccess}}" class="glyphicon glyphicon-arrow-up green" > </span>
+                                <span ng-show="{{city1.quantityAccess > vm.listCityModel.list2[$index].quantityAccess}}" class="glyphicon glyphicon-arrow-up green" > </span>
                                 
-                                <span ng-show="{{city1.quantityAccess < listCityModel.list2[$index].quantityAccess}}" class="glyphicon glyphicon-arrow-down red"> </span>
+                                <span ng-show="{{city1.quantityAccess < vm.listCityModel.list2[$index].quantityAccess}}" class="glyphicon glyphicon-arrow-down red"> </span>
                           </td>
                           <td class="center info" ng-show="dataModel.compare">                                        
-                                <span ng-show="{{city1.averageTime > listCityModel.list2[$index].averageTime}}" class="glyphicon glyphicon-arrow-up green" > </span>
+                                <span ng-show="{{city1.averageTime > vm.listCityModel.list2[$index].averageTime}}" class="glyphicon glyphicon-arrow-up green" > </span>
                                 
-                                <span ng-show="{{city1.averageTime < listCityModel.list2[$index].averageTime}}" class="glyphicon glyphicon-arrow-down red"> </span>
+                                <span ng-show="{{city1.averageTime < vm.listCityModel.list2[$index].averageTime}}" class="glyphicon glyphicon-arrow-down red"> </span>
                           </td>                            
                           <td class="center info" ng-show="dataModel.compare">      
-                                <span ng-show="{{city1.txRejection > listCityModel.list2[$index].txRejection}}" class="glyphicon glyphicon-arrow-up green" > </span>
+                                <span ng-show="{{city1.txRejection > vm.listCityModel.list2[$index].txRejection}}" class="glyphicon glyphicon-arrow-up green" > </span>
                                 
-                                <span ng-show="{{city1.txRejection < listCityModel.list2[$index].txRejection}}" class="glyphicon glyphicon-arrow-down red"> </span>
+                                <span ng-show="{{city1.txRejection < vm.listCityModel.list2[$index].txRejection}}" class="glyphicon glyphicon-arrow-down red"> </span>
                           </td>
                       </tr>
                       <tr>
@@ -57,13 +57,13 @@
                                {{params.dateInit2 | date: 'dd/MM/yyyy'}} - {{params.dateInit2 | date: 'dd/MM/yyyy'}}
                           </td>
                            <td class="center warning" >
-                              {{listCityModel.list2[$index].quantityAccess}} -- index - {{$index}}
+                              {{vm.listCityModel.list2[$index].quantityAccess}} -- index - {{$index}}
                           </td>
                           <td class="center warning" >
-                              {{listCityModel.list2[$index].averageTime}}
+                              {{vm.listCityModel.list2[$index].averageTime}}
                           </td>                           
                           <td class="center warning" >
-                              {{listCityModel.list2[$index].txRejection}}%
+                              {{vm.listCityModel.list2[$index].txRejection}}%
                           </td>
                       </tr>                                             
                   </tbody>                   
