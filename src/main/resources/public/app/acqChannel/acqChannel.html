@@ -1,0 +1,76 @@
+<div class="ch-container" ng-init="vm.init()">
+    <div class="row">       
+        <div class="alert alert-danger" ng-show="erro">
+            {{mensagemErro}}
+        </div>
+        
+        <div class="row">                     
+            <div class="well col-md-6 center login-box" > 
+
+              <table class="table table-condensed" border="1">
+                  <thead>
+                      <tr>
+                          <th>Name</th>
+                          <th>Quantity of Access</th>
+                          <th>Average Time</th>                            
+                          <th>Rejection Rate</th>
+                      </tr>
+                  </thead>    
+
+                  <tbody ng-repeat="acqChannel1 in vm.listAcqChannelModel.list1" >                        
+                      <tr>
+                          <td class="center info">      
+                               {{acqChannel1.name}}
+                          </td>
+                          <td class="center info" ng-show="dataModel.compare">                                       
+                                <span ng-show="{{acqChannel1.quantityAccess > vm.listAcqChannelModel.list2[$index].quantityAccess}}" class="glyphicon glyphicon-arrow-up green" > </span>
+                                
+                                <span ng-show="{{acqChannel1.quantityAccess < vm.listAcqChannelModel.list2[$index].quantityAccess}}" class="glyphicon glyphicon-arrow-down red"> </span>
+                          </td>
+                          <td class="center info" ng-show="dataModel.compare">                                        
+                                <span ng-show="{{acqChannel1.averageTime > vm.listAcqChannelModel.list2[$index].averageTime}}" class="glyphicon glyphicon-arrow-up green" > </span>
+                                
+                                <span ng-show="{{acqChannel1.averageTime < vm.listAcqChannelModel.list2[$index].averageTime}}" class="glyphicon glyphicon-arrow-down red"> </span>
+                          </td>                            
+                          <td class="center info" ng-show="dataModel.compare">      
+                                <span ng-show="{{acqChannel1.txRejection > vm.listAcqChannelModel.list2[$index].txRejection}}" class="glyphicon glyphicon-arrow-up green" > </span>
+                                
+                                <span ng-show="{{acqChannel1.txRejection < vm.listAcqChannelModel.list2[$index].txRejection}}" class="glyphicon glyphicon-arrow-down red"> </span>
+                          </td>
+                      </tr>
+                      <tr>
+                           <td class="center info">      
+                               {{params.dateInit1 | date: 'dd/MM/yyyy'}} - {{params.dateEnd1 | date: 'dd/MM/yyyy'}}
+                          </td>
+                           <td class="center info" class="info">      
+                               {{acqChannel1.quantityAccess}}
+                          </td>
+                          <td class="center info" class="info">      
+                               {{acqChannel1.averageTime}}
+                          </td>                           
+                          <td class="center info" class="info">      
+                               {{acqChannel1.txRejection}}%
+                          </td>
+                      </tr>
+                     <tr ng-show="dataModel.compare">
+                          <td class="center warning" >
+                               {{params.dateInit2 | date: 'dd/MM/yyyy'}} - {{params.dateInit2 | date: 'dd/MM/yyyy'}}
+                          </td>
+                           <td class="center warning" >
+                              {{vm.listAcqChannelModel.list2[$index].quantityAccess}} -- index - {{$index}}
+                          </td>
+                          <td class="center warning" >
+                              {{vm.listAcqChannelModel.list2[$index].averageTime}}
+                          </td>                           
+                          <td class="center warning" >
+                              {{vm.listAcqChannelModel.list2[$index].txRejection}}%
+                          </td>
+                      </tr>                                             
+                  </tbody>                   
+              </table>              
+            </div> 
+                        <!--/span-->
+        </div><!--/row-->
+    </div><!--/fluid-row-->
+    
+</div>

@@ -7,9 +7,9 @@ import java.util.List;
 import com.google.api.services.analytics.Analytics.Data.Ga;
 import com.google.api.services.analytics.model.GaData;
 
-import br.com.analytics.google.v3.model.ListPageDTO;
 import br.com.analytics.google.v3.model.PageDTO;
 import br.com.analytics.google.v3.model.ParamsDTO;
+import br.com.analytics.google.v3.model.list.ListPageDTO;
 import br.com.analytics.util.DateUtil;
 
 public class GAPage extends GA {

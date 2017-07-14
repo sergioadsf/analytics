@@ -5,7 +5,7 @@ import java.io.IOException;
 import com.google.api.services.analytics.Analytics.Data.Ga;
 import com.google.api.services.analytics.Analytics.Data.Ga.Get;
 
-import br.com.analytics.google.v3.model.ListDTO;
+import br.com.analytics.google.v3.model.list.ListDTO;
 
 public class GA extends GAParams {
 

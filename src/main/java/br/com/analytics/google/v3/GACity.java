@@ -8,8 +8,8 @@ import com.google.api.services.analytics.Analytics.Data.Ga;
 import com.google.api.services.analytics.model.GaData;
 
 import br.com.analytics.google.v3.model.CityDTO;
-import br.com.analytics.google.v3.model.ListCityDTO;
 import br.com.analytics.google.v3.model.ParamsDTO;
+import br.com.analytics.google.v3.model.list.ListCityDTO;
 import br.com.analytics.util.DateUtil;
 
 public class GACity extends GA {

@@ -58,5 +58,12 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
 		controllerAs : 'vm'
 	})
 
+	.state('acqChannel', {
+		url : '/acqChannel',
+		templateUrl : 'app/acqChannel/acqChannel.html',
+		controller : 'AcqChannelController',
+		controllerAs : 'vm'
+	})
+
 	// $locationProvider.html5Mode(true);
 }

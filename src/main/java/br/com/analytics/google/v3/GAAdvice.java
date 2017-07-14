@@ -8,8 +8,8 @@ import com.google.api.services.analytics.Analytics.Data.Ga;
 import com.google.api.services.analytics.model.GaData;
 
 import br.com.analytics.google.v3.model.AdviceDTO;
-import br.com.analytics.google.v3.model.ListAdviceDTO;
 import br.com.analytics.google.v3.model.ParamsDTO;
+import br.com.analytics.google.v3.model.list.ListAdviceDTO;
 import br.com.analytics.util.DateUtil;
 
 public class GAAdvice extends GA {

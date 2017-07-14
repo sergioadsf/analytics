@@ -8,7 +8,7 @@ import com.google.api.services.analytics.Analytics.Data.Ga;
 import com.google.api.services.analytics.model.GaData;
 
 import br.com.analytics.google.v3.model.VisitDTO;
-import br.com.analytics.google.v3.model.ListVisitDTO;
+import br.com.analytics.google.v3.model.list.ListVisitDTO;
 import br.com.analytics.google.v3.model.ParamsDTO;
 import br.com.analytics.util.DateUtil;
 
