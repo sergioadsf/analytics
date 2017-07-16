@@ -30,10 +30,10 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
 		controllerAs : 'vm'
 	})
 
-	.state('advice', {
-		url : '/advice',
-		templateUrl : 'app/advice/advice.html',
-		controller : 'AdviceController',
+	.state('device', {
+		url : '/device',
+		templateUrl : 'app/device/device.html',
+		controller : 'DeviceController',
 		controllerAs : 'vm'
 	})
 
@@ -50,7 +50,7 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
 		controller : 'ReferTrafficController',
 		controllerAs : 'vm'
 	})
-	
+
 	.state('page', {
 		url : '/page',
 		templateUrl : 'app/page/page.html',
